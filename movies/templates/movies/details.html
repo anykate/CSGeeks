@@ -1,0 +1,14 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}
+Movie Songs - {{ movie }}
+{% endblock %}
+
+{% block content %}
+<h1>Songs from {{ movie }}:</h1>
+{% for song in songs %}
+<ul>
+    <li><h2>{{ song }}</h2></li>
+</ul>
+{% endfor %}
+{% endblock %}

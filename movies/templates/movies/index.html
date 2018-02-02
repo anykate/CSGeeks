@@ -1,0 +1,18 @@
+{% extends 'movies/base.html' %}
+
+{% block title %}
+Index Page
+{% endblock %}
+
+{% block content %}
+<h1>Hello World!</h1>
+{% if movies %}
+{% for movie in movies %}
+<ul>
+    <li><a href="{% url 'movies:details' movie.id %}"><h2>{{ movie }}</h2></a></li>
+</ul>
+{% endfor %}
+{% else %}
+<h1>You have no movies!</h1>
+{% endif %}
+{% endblock %}
